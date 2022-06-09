@@ -1,0 +1,44 @@
+/*
+ * Variables
+ */
+$bg-color-container: #2f2c2c;
+$fnt-color-labels: #fff;
+$bg-color-container: #2f2c2c;
+$fnt-color-primary: #575454;
+$fnt-family-primary: 'Lexend Deca', sans-serif;
+
+/*
+ * Layouts
+ */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #e9e9e9;
+}
+
+.header {
+    &__container {
+        display: flex;
+        width: 100%;
+        background-color: $bg-color-container;
+        padding: 0.8rem;
+    }
+}
+
+.main {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+}
+
+.footer {
+    &__container {
+        display: flex;
+        background-color: $bg-color-container;
+        padding: 1.6rem 0.8rem;
+        justify-content: space-between;
+    }
+}
