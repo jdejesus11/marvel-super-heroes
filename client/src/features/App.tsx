@@ -11,12 +11,12 @@ interface IElement {
     children: React.ReactNode
 }
 
-const Header = () => {
-    return <>App </>
+const Header = ({ children }: IElement) => {
+    return <>{children} </>
 }
 
-const Main = () => {
-    return <>Main</>
+const Main = ({ children }: IElement) => {
+    return <>{children}</>
 }
 
 const Footer = ({ children }: IElement) => {
@@ -24,11 +24,12 @@ const Footer = ({ children }: IElement) => {
 }
 
 const Container = ({ children }: IContainer) => {
+    const [header, main, footer] = children
     return (
         <>
-            <header className="header__container">{children[0]}</header>
-            <main className="main__container">{children[1]}</main>
-            <footer className="footer__container">{children[2]}</footer>
+            <header className="header__container">{header}</header>
+            <main className="main__container">{main}</main>
+            <footer className="footer__container">{footer}</footer>
         </>
     )
 }
@@ -36,8 +37,8 @@ const Container = ({ children }: IContainer) => {
 const App = () => {
     return (
         <Container>
-            <Header />
-            <Main />
+            <Header>Header</Header>
+            <Main>Main</Main>
             <Footer>Footer</Footer>
         </Container>
     )
