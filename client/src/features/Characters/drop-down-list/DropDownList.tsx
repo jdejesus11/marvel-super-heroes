@@ -66,6 +66,7 @@ const DropDownList = ({
             data-name="dropdownlist"
             className={getComponentClasses()}
             onClick={onClickEvent}
+            role="select-list"
         >
             <div className="dropdown__label-container">
                 <label className="dropdown__label">
