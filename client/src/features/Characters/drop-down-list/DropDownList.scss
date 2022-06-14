@@ -1,0 +1,123 @@
+/*
+ * Variables
+ */
+$bg-color-dropdown: #fff;
+$bg-color-options: #fff;
+$bg-color-options-item: #e84a5f;
+$bg-color-icons: #797979;
+$bg-color-dropdown-disabled: #f0f0f0;
+$fnt-color-primary: #575454;
+$fnt-family-primary: 'Lexend Deca', sans-serif;
+$fnt-color-hover-options-item: #fff;
+$fnt-family-label-primary: 1rem;
+$box-color-dropdown: rgba(0, 0, 0, 0.16);
+$box-color-options: rgba(0, 0, 0, 0.16);
+$br-dimensions-dropdown: 0.5rem;
+$padding-element-primary: 0rem 0.8rem;
+$height-element-primary: 3.3rem;
+$height-icon-size-primary: 18px;
+$width-icon-size-primary: 18px;
+
+/*
+ * Layouts
+ */
+.dropdown {
+    &__label-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: $padding-element-primary;
+        height: $height-element-primary;
+    }
+
+    &__delete-icon-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 1rem;
+    }
+
+    &__icon-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__option-list-container {
+        display: block;
+        position: relative;
+        z-index: 2000;
+    }
+}
+
+/*
+ * Modules
+ */
+.dropdown {
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    background-color: $bg-color-dropdown;
+    position: relative;
+    border-radius: $br-dimensions-dropdown;
+    box-shadow: $box-color-dropdown 0px 1px 4px;
+    font-family: $fnt-family-primary;
+
+    &__label {
+        display: flex;
+        flex: 1;
+        font-size: $fnt-family-label-primary;
+        color: $fnt-color-primary;
+    }
+
+    &__icon {
+        width: $width-icon-size-primary;
+        height: $height-icon-size-primary;
+    }
+
+    &__option-list {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $bg-color-options;
+        border-radius: 0.5rem;
+        margin-top: 0.5rem;
+        box-shadow: $box-color-options 0px 1px 4px;
+    }
+
+    &__option-item {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: $padding-element-primary;
+        height: $height-element-primary;
+        transition: 0.3s;
+        color: $fnt-color-primary;
+
+        &:hover {
+            background-color: $bg-color-options-item;
+            color: $fnt-color-hover-options-item;
+            border-radius: 0.5rem;
+        }
+    }
+}
+
+/*
+ * States
+ */
+.dropdown {
+    &--hidden {
+        display: none;
+    }
+
+    &--disabled {
+        background-color: $bg-color-dropdown-disabled;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 900px) {
+}
+
+@media (min-width: 900px) {
+}

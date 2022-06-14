@@ -2,6 +2,7 @@ import React, { Component, ElementType } from 'react'
 import '../styles/reset.scss'
 import '../styles/styles.scss'
 import './App.scss'
+import DropDownList from './Characters/drop-down-list/DropDownList'
 
 interface IContainer {
     children?: React.ReactNode[]
@@ -38,7 +39,16 @@ const App = () => {
     return (
         <Container>
             <Header>Header</Header>
-            <Main>Main</Main>
+            <Main>
+                <DropDownList
+                    options={{
+                        Ascending: 1,
+                        Descending: 2,
+                    }}
+                    placeholder="select"
+                    onSelectEventCallback={() => {}}
+                />
+            </Main>
             <Footer>Footer</Footer>
         </Container>
     )
