@@ -3,6 +3,7 @@ import '../styles/reset.scss'
 import '../styles/styles.scss'
 import './App.scss'
 import DropDownList from './Characters/drop-down-list/DropDownList'
+import SwitchButton from './Characters/swtich-button/SwitchButton'
 
 interface IContainer {
     children?: React.ReactNode[]
@@ -35,19 +36,23 @@ const Container = ({ children }: IContainer) => {
     )
 }
 
+/** 
+ * <DropDownList
+        options={{
+            Ascending: 1,
+            Descending: 2,
+        }}
+        placeholder="select"
+        onSelectEventCallback={() => {}}
+    />
+ */
+
 const App = () => {
     return (
         <Container>
             <Header>Header</Header>
             <Main>
-                <DropDownList
-                    options={{
-                        Ascending: 1,
-                        Descending: 2,
-                    }}
-                    placeholder="select"
-                    onSelectEventCallback={() => {}}
-                />
+                <SwitchButton />
             </Main>
             <Footer>Footer</Footer>
         </Container>
